@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "name": "detect-browser-back-navigation",
+  "description": "Detects when user clicks on the back button.",
+  "license": "MIT",
+  "author": "Iago Bruno",
+  "homepage": "https://github.com/iagobruno/detect-browser-back-navigation#readme",
+  "repository": "github:iagobruno/detect-browser-back-navigation",
+  "main": "dist/detect-browser-back-navigation.cjs.production.min.js",
+  "module": "dist/detect-browser-back-navigation.esm.js",
+  "unpkg": "dist/detect-browser-back-navigation.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "dev": "tsdx watch",
+    "build": "tsdx build --format cjs,esm",
+    "lint": "eslint **/*.ts",
+    "typecheck": "tsc --noEmit",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.21.0",
+    "@typescript-eslint/parser": "^5.21.0",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.6.2",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "size-limit": [
+    {
+      "path": "dist/detect-browser-back-navigation.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/detect-browser-back-navigation.esm.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/detect-browser-back-navigation.umd.production.min.js",
+      "limit": "10 KB"
+    }
+  ]
+}
