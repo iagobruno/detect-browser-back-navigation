@@ -16,16 +16,16 @@ export default function detectBackButton(
   function handlePopEvent(evt: PopStateEvent) {
     const isBackButtonPressed = 'nextId' in evt.state && evt.state.nextId === id
     if (isBackButtonPressed) {
-      if (__DEV__) console.log('BACK BUTTON PRESSED')
+      // console.log('BACK BUTTON PRESSED')
       callback()
     }
   }
 
   window.addEventListener('popstate', handlePopEvent)
-  if (__DEV__) console.log('LISTENING TO POP STATE EVENT')
+  // console.log('LISTENING TO POP STATE EVENT')
 
   function unsub() {
-    if (__DEV__) console.log('UNLISTENING POP STATE EVENT')
+    // console.log('UNLISTENING POP STATE EVENT')
     window.removeEventListener('popstate', handlePopEvent)
 
     if ('id' in history.state && history.state.id === id) {

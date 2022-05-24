@@ -4,7 +4,7 @@ Detects when user clicks on the back button.
 
 The main use case is to creating modals, so you can close a modal when the user clicks on the phone back button, like in native mobile apps.
 
-// GIT EXAMPLE
+![demo.gif](./demo.gif)
 
 [![npm](https://img.shields.io/npm/v/detect-browser-back-navigation)](https://www.npmjs.com/package/detect-browser-back-navigation)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/detect-browser-back-navigation)
